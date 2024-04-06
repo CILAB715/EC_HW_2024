@@ -16,7 +16,7 @@ if system_os == "Windows":
         executable = ".\\main.exe"
     elif os.path.exists(".\\main.py"):
         executable = "python" if os.path.exists("python") else "python3"
-    script_path = None
+    script_path = ".\\main.py" if os.path.exists(".\\main.py") else None
 elif system_os == "Linux":
     if os.path.exists("./main"):
         executable = "./main"
