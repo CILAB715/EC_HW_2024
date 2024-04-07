@@ -102,11 +102,10 @@ Please directly print the best fitness of the final generation.
 
 For example, with `01.in`, suppose I finally find the best solution `430 420 419 432 426 419 415 417 414 429`, and the fitness of my solution is 50.5991.
 Then just print 50.5991.
-- Sample output:
 
-  In `testcase/*.out`, each file contains two lines: the first line is the mean best fitness running by TAs with 120 trials, and the second line is the standard deviation.
+In `testcase/*.out`, each file contains two lines: the first line is the mean best fitness running by TAs with 120 trials, and the second line is the standard deviation.
   
-  We will run your code for 30 trials and if your mean fitness is within two standard deviations, it is considered correct. 
+We will run your code for 30 trials and if your mean fitness is within two standard deviations, it is considered correct. 
 #### Judger Usuage
 Place your executable and the judger in the same directory, and run them using `python3 judger.py`. 
 
