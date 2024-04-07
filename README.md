@@ -6,7 +6,9 @@
   
 #### Archived Announcement
 (3/27) This is the first time we are grading in this manner. If this method of code evaluation truly reflects accuracy, we will continue to use this approach for assessing implementations in the future. Therefore, if you have any questions or encounter any issues, please don't hesitate to ask. Thank you!
+
 (3/27) When you run judger, please set **0.2** as the alpha of whole arithmetic and set **0.5** as the probability of uniform crossover. But you can test other values as your experiment and write the result and analysis in your report.
+
 (3/25) The `testcase/*.out` is released, and here's a typo in `09.in` and `judger.py`, please pull the new version using:
 ```bash
 git pull origin main
@@ -102,7 +104,7 @@ For example, with `01.in`, suppose I finally find the best solution `430 420 419
 Then just print 50.5991.
 - Sample output:
 
-  In `testcase/*.out`, the first line contains two values: the first value is the mean best fitness running by TAs with 120 trials, and the second value is the standard deviation.
+  In `testcase/*.out`, each file contains two lines: the first line is the mean best fitness running by TAs with 120 trials, and the second line is the standard deviation.
   
   We will run your code for 30 trials and if your mean fitness is within two standard deviations, it is considered correct. 
 #### Judger Usuage
