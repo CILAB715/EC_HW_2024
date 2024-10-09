@@ -1,6 +1,7 @@
 import subprocess
 import numpy as np
 import os
+import re
 import platform
 
 test_num = 1
@@ -12,34 +13,29 @@ RESET = '\033[0m'
 system_os = platform.system()
 executable = None
 
-def check_python_version():
+def check_python_version(command):
     try:
-        result = subprocess.run(["python", "--version"], capture_output=True, text=True)
-        if result.returncode == 0 and "Python" in result.stdout:
-            return "python"
-        else:
-            result = subprocess.run(["python3", "--version"], capture_output=True, text=True)
-            if result.returncode == 0 and "Python" in result.stdout:
-                return "python3"
+        result = subprocess.run([command, "--version"], capture_output=True, text=True)
+        version_output = result.stdout if result.stdout else result.stderr
+        return bool(re.search(r"Python \d+\.\d+", version_output))
     except FileNotFoundError:
-        pass
-    return None
+        return False
 
 if system_os == "Windows":
     if os.path.exists(".\\main.exe"):
         executable = ".\\main.exe"
     elif os.path.exists(".\\main.py"):
-        executable = check_python_version()
-        script_path = ".\\main.py" if executable else None
+        executable = "python" if check_python_version("python") else "python3"
+        print(executable)
+    script_path = ".\\main.py" if os.path.exists(".\\main.py") else None
 elif system_os == "Linux":
     if os.path.exists("./main"):
         executable = "./main"
     elif os.path.exists("./main.py"):
-        executable = check_python_version()
-        script_path = "./main.py" if executable else None
+        executable = "python" if check_python_version("python") else "python3"
+    script_path = "./main.py" if os.path.exists("./main.py") else None
 
 print(f"Executable: {executable}, Script path: {script_path}")
-
 
 if executable is None:
     raise FileNotFoundError("Neither compiled executable nor Python script found.")
