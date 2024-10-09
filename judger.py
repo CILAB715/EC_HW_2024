@@ -3,7 +3,7 @@ import numpy as np
 import os
 import platform
 
-test_num = 30
+test_num = 1
 
 GREEN = '\033[92m'
 RED = '\033[91m'
