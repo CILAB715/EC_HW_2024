@@ -1,26 +1,15 @@
-# EC_hw_2024
-**If you encounter any issues or have any questions regarding this repository, please don't hesitate to open an issue!**
+# EC_hw_2025
+
 ## Latest Announcement
-1. (4/6) `judger.py` has some error when execute python code, already fixed it.
-1. (4/3) Update `judger.py` and `cpp/Makefile`
+**If you encounter any issues or have any questions regarding this repository, please don't hesitate to open an issue!**
   
 #### Archived Announcement
-(3/27) This is the first time we are grading in this manner. If this method of code evaluation truly reflects accuracy, we will continue to use this approach for assessing implementations in the future. Therefore, if you have any questions or encounter any issues, please don't hesitate to ask. Thank you!
-
-(3/27) When you run judger, please set **0.2** as the alpha of whole arithmetic and set **0.5** as the probability of uniform crossover. But you can test other values as your experiment and write the result and analysis in your report.
-
-(3/25) The `testcase/*.out` is released, and here's a typo in `09.in` and `judger.py`, please pull the new version using:
-```bash
-git pull origin main
-```
-
-(3/19) The release of `testcase/*.out` files will be delayed. Expected upload date: March 24.
 
 ## Sample Code Usage
 Clone this repository to your local machine,
 ```bash
-git clone https://github.com/fffchameleon/EC_hw_2024.git
-cd EC_hw_2024
+git clone https://github.com/CILAB715/EC_HW_2025.git
+cd EC_hw_2025
 ```
 If you choose to write this assignment in C++,
 ```bash
