@@ -98,7 +98,7 @@ In `testcase/*.out`, each file contains two lines: the first line is the mean be
   
 We will run your code for 30 trials and if your mean fitness is within two standard deviations, it is considered correct. 
 #### Judger Usuage
-Place your executable and the judger in the same directory, and run them using `python3 judger.py`. 
+Place your executable and the judger in the same directory, and run them using `python judger.py`. 
 
 It may take a long time to run judge (each testcse will run 30 trials), so be patient!
 
