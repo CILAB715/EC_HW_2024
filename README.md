@@ -9,7 +9,7 @@
 Clone this repository to your local machine,
 ```bash
 git clone https://github.com/CILAB715/EC_HW_2024.git
-cd EC_hw_2024
+cd EC_HW_2024
 ```
 If you choose to write this assignment in C++,
 ```bash
