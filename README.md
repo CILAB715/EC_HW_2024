@@ -19,7 +19,7 @@ cd cpp/ && make
 If you prefer to use Python, use,
 ```bash
 cd py
-python3 main.py -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 500 -d
+python main.py -n 10 -r binary -p 100 -u 0 -c 0.9 -m 0.1 -g 500 -d
 ```
 Both commands should output the following information,
 ```
