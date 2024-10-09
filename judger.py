@@ -11,18 +11,35 @@ RESET = '\033[0m'
 
 system_os = platform.system()
 executable = None
+
+def check_python_version():
+    try:
+        result = subprocess.run(["python", "--version"], capture_output=True, text=True)
+        if result.returncode == 0 and "Python" in result.stdout:
+            return "python"
+        else:
+            result = subprocess.run(["python3", "--version"], capture_output=True, text=True)
+            if result.returncode == 0 and "Python" in result.stdout:
+                return "python3"
+    except FileNotFoundError:
+        pass
+    return None
+
 if system_os == "Windows":
     if os.path.exists(".\\main.exe"):
         executable = ".\\main.exe"
     elif os.path.exists(".\\main.py"):
-        executable = "python"
-    script_path = ".\\main.py" if os.path.exists(".\\main.py") else None
+        executable = check_python_version()
+        script_path = ".\\main.py" if executable else None
 elif system_os == "Linux":
     if os.path.exists("./main"):
         executable = "./main"
     elif os.path.exists("./main.py"):
-        executable = "python" if os.path.exists("python") else "python3"
-    script_path = "./main.py" if os.path.exists("./main.py") else None
+        executable = check_python_version()
+        script_path = "./main.py" if executable else None
+
+print(f"Executable: {executable}, Script path: {script_path}")
+
 
 if executable is None:
     raise FileNotFoundError("Neither compiled executable nor Python script found.")
