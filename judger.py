@@ -34,6 +34,12 @@ elif system_os == "Linux":
     elif os.path.exists("./main.py"):
         executable = "python" if check_python_version("python") else "python3"
     script_path = "./main.py" if os.path.exists("./main.py") else None
+elif system_os == "Darwin":  
+    if os.path.exists("./main"):
+        executable = "./main"
+    elif os.path.exists("./main.py"):
+        executable = "python" if check_python_version("python") else "python3"
+    script_path = "./main.py" if os.path.exists("./main.py") else None
 
 print(f"Executable: {executable}, Script path: {script_path}")
 
