@@ -1,7 +1,7 @@
 # EC_HW_2024
 
 ## Latest Announcement
-(10/12) Updated 'judger.py' for macOS.
+(10/12) Updated `judger.py` for macOS.
 
 [HackMD Link](https://hackmd.io/@4UDDOpeNS8G39Ake7fKULg/ryHb6gVkkl)
   
