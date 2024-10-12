@@ -1,12 +1,12 @@
 # EC_HW_2024
 
 ## Latest Announcement
-(10/12) Updated `judger.py` for macOS.
-
-[HackMD Link](https://hackmd.io/@4UDDOpeNS8G39Ake7fKULg/ryHb6gVkkl)
+(10/12) Updated `judger.py` for macOS
   
 #### Archived Announcement
 **If you encounter any issues or have any questions regarding this repository, please feel free to open an issue or ask on eeclass. The TAs will respond either on eeclass or in the following note.**
+
+[HackMD Link](https://hackmd.io/@4UDDOpeNS8G39Ake7fKULg/ryHb6gVkkl)
 
 ## Sample Code Usage
 Clone this repository to your local machine,
